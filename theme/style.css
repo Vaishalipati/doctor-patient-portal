@@ -1,0 +1,64 @@
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover{
+	background-color:green;
+	border-top-left-radius:1em;
+	border-top-right-radius:1em;
+}
+
+.navbar-inverse .navbar-nav > .open > a:hover{
+	 background-color:red;
+	 border-top-left-radius:1em;
+	 border-top-right-radius:1em;
+	 border-bottom-left-radius:0em;
+	 border-bottom-right-radius:0em;
+ }
+ 
+ .tt th{
+	 width:500px;
+	 color:white;
+	 font-weight:400;
+	 padding:5px;
+	 background:#E90303;
+	 border:1px solid black;
+ }
+ 
+ .tt td{
+	 border:1px solid black;
+	 text-align:center;
+ }
+ button.list-group-item{
+	cursor:default;
+}
+
+button.list-group-item:hover{
+	background:#337ab7;
+	color:white;
+	border-left:6px solid #F03333;
+	transition:0.5s;
+}
+
+.aa{
+	text-decoration:none; 
+	color:#555;
+}
+
+.aa:hover{
+	text-decoration:none; 
+	color:white;
+}
+
+.target > div  {
+    display:none;
+}
+
+.target > div:target{
+    display:block;
+}
+.si{
+	margin-top:-4%;
+	color:white;
+	float:left;
+	width:110%;
+	margin-left:-5%;
+	background:rgba(255,0,0,0.8);
+	padding:8px;
+}
