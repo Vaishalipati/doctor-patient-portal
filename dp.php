@@ -5,6 +5,7 @@ if(isset($_POST['btn_doc'])){
 $mydoc = $_FILES['file']['name'];
 $type = $_FILES['file']['type'];
 $temp = $_FILES['file']['tmp_name'];
+ 
 
 $docpic = $_FILES['newpic']['name'];
 $type1 = $_FILES['newpic']['type'];
@@ -20,8 +21,10 @@ $phone = $_POST['phone'];
 $docid = $_POST['docid'];
 $adrid = $_POST['adrid'];
 $cat = $_POST['doccat'];
-$question = $_POST['psques'];
-$answer = $_POST['answer'];
+//$question = $_POST['psques'];
+//$answer = $_POST['answer'];
+$question = "";
+$answer = "";
 
 include('includes/conn.php');
 $q = "SELECT * FROM doctor where email ='$email'";
