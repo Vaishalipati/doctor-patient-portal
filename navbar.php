@@ -47,7 +47,7 @@
 	
 	
 	<ul class="nav navbar-nav pull-right">
-	<li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+	<li><a href="index.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
 	<li><a href="about.php"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
 	<li><a href="contact.php"><span class="glyphicon glyphicon-earphone"></span> Contact Us</a></li>
 	<li><a href="help.php"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
@@ -68,7 +68,7 @@
 	
 	<div id="co" class="collapse navbar-collapse">
 	<ul class="nav navbar-nav pull-right">
-	<li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+	<li><a href="index.php"><span class="glyphicon glyphicon-home"></span> Home</a></li>
 	<li><a href="about.php"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
 	<li><a href="contact.php"><span class="glyphicon glyphicon-earphone"></span> Contact Us</a></li>
 	<li><a href="help.php"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
