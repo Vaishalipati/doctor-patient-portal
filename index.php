@@ -160,7 +160,10 @@ $(function () {
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 	
-<?php include "profilemodels.php"?>
+	<?php if(isset($_SESSION['useremail'])){
+		
+		include "profilemodels.php"; 
+	 }?>	
 	
 
 

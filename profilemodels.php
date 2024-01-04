@@ -1,3 +1,4 @@
+
 <?php if($type=="doc"){?>
 <!--Doctor Profile tab start-->
 <div class="modal fade" id="profiletab" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">

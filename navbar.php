@@ -33,7 +33,7 @@
 	}
 	?>
 
-				
+		
 	<?php if(!isset($_SESSION['useremail'])){?>
 
     <div  style="padding:25px; border-top-left-radius:0.5em; border-top-right-radius:0.5em;" class="mainmenu container nav navbar-inverse" data-spy="affix" data-offset-top="100">
@@ -242,3 +242,4 @@
 			 </div>
   </div>
 </div>
+

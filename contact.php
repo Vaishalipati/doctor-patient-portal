@@ -89,8 +89,9 @@ $(function () {
     <script src="js/bootstrap.min.js"></script>
 	
 
-	<?php include "profilemodels.php"?>
-
+<?php if(isset($_SESSION['useremail'])){		
+	include "profilemodels.php"; 
+}?>
 <!--feedback box-->
 
 
