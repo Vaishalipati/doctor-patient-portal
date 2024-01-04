@@ -86,45 +86,62 @@
 <div style="margin-left:3%; width:110%; float:left;" class="panel panel-primary">
   <div class="panel-heading"><span class="glyphicon glyphicon-comment"></span> Testimonials</div>
   <div class="panel-body">
-<?php
-$q = "SELECT feed,pid FROM feedback AS feed ORDER BY RAND() LIMIT 1";
+  <?php
+$q = "SELECT feed,pid,did FROM feedback AS feed ORDER BY RAND() LIMIT 1";
 $rr = mysqli_query($con,$q);
 $res = mysqli_fetch_array($rr);
-$p = $res['feed'];
-$d = $res['pid'];
 
 if($res == ""){
 	echo "No feedback given yet";
 }
-elseif($p && $d !=""){
-$qq = "select * from patient where pid='$d' ";
-
-
-$rq = mysqli_query($con,$qq);
-
-while($row = mysqli_fetch_array($rq)){
-	$na = $row['name'];
-	$adr = $row['adharno'];
-}
-
-$dir = "patient/".$adr."/img/";
-$open = opendir($dir);
-
-	while(($files = readdir($open)) != FALSE){
-	if($files!="."&&$files!=".."&&$files !="Thumbs.db"){
-		echo "<div style='font-family:calibri' class='well'><img id='hello' style='margin-top:2%; border-radius:6em;' width='50' height='50'  src='$dir/$files'> Given By <b>$na</b>";
-	}
-	
-	
-	}
-
-echo "<br><br>$p</div>";
+else{
+	$p = $res['feed'];
+	$d = $res['pid'];
+	$doc = $res['did'];
+	if($p && $d !=""){
+		$qq = "select * from patient where pid='$d' ";
+		$rq = mysqli_query($con,$qq);
+		
+		while($row = mysqli_fetch_array($rq)){
+			$na = $row['name'];
+			$adr = $row['adharno'];
+		}
+		
+		$dir = "patient/".$adr."/img/";
+		$open = opendir($dir);
+		
+		
+		$qqd = "select * from doctor where did='$doc' ";
+		$rqd = mysqli_query($con,$qqd);
+		
+		while($row = mysqli_fetch_array($rqd)){
+			$docname=$row['name'];
+			$docid = $row['docid'];
+		}
+		
+		$dir2 = "doctor/".$docid."/img/";
+		$open2 = opendir($dir2);
+		
+		
+			while(($files = readdir($open)) != FALSE && ($files2 = readdir($open2)) != FALSE){
+			if($files!="."&&$files!=".."&&$files !="Thumbs.db" && $files2!="."&&$files2!=".."&&$files2 !="Thumbs.db"){
+				echo "<div style='font-family:calibri' class='well'><img id='hello' style='margin-top:2%; border-radius:6em;' width='50' height='50'  src='$dir/$files'> Given By <b>$na</b> 
+				<br>  <img id='hello' style='margin-top:2%; border-radius:6em;' width='50' height='50'  src='$dir2/$files2'> About DR. <b>$docname</b>";
+			}
+			}
+		echo "<br><br>$p<br></br></div>";
+		}
+		
 }
 ?>
-  </div>
+		
+
+
 </div>
 </div>
-	</div>
+</div>
+</div>
+
 	<div style="font-family:calibri; font-size:14px; text-align:center;" id="static">
 	<?php
 	include('includes/conn.php');
