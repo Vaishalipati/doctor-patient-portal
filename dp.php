@@ -43,26 +43,15 @@ $r5 = mysqli_query($con,$q5);
 $r6 = mysqli_query($con,$q6);
 $r7 = mysqli_query($con,$q7);
 
-if($r->num_rows>0){
+if($r->num_rows>0 || $r2->num_rows>0){
 		echo '<script type="text/javascript">'; 
 		echo 'alert("Email id is already registered");'; 
 		echo 'window.location.href = "index.php";';
 		echo '</script>';
 }
-elseif($r2->num_rows>0){
-		echo '<script type="text/javascript">'; 
-		echo 'alert("Email id is already registered");'; 
-		echo 'window.location.href = "index.php";';
-		echo '</script>';
-}
-elseif($r3->num_rows>0){
+
+elseif($r3->num_rows>0 || $r4->num_rows>0){
 	echo '<script type="text/javascript">'; 
-		echo 'alert("Mobile no is already registered");'; 
-		echo 'window.location.href = "index.php";';
-		echo '</script>';
-}
-elseif($r4->num_rows>0){
-		echo '<script type="text/javascript">'; 
 		echo 'alert("Mobile no is already registered");'; 
 		echo 'window.location.href = "index.php";';
 		echo '</script>';
@@ -73,19 +62,14 @@ elseif($r5->num_rows>0){
 		echo 'window.location.href = "index.php";';
 		echo '</script>';
 }
-elseif($r6->num_rows>0){
+elseif($r6->num_rows>0 || $r7->num_rows>0){
 		echo '<script type="text/javascript">'; 
 		echo 'alert("Adhar no is already registered");'; 
 		echo 'window.location.href = "index.php";';
 		echo '</script>';
 }
 
-else if($r7->num_rows>0){
-		echo '<script type="text/javascript">'; 
-		echo 'alert("Adhar no is already registered");'; 
-		echo 'window.location.href = "index.php";';
-		echo '</script>';
-}
+
 else{
 	
 if(($type1=="image/jpeg") || ($type1=="image/jpg") || ($type1=="image/png")){
@@ -167,8 +151,8 @@ $address = $_POST['paddress'];
 $gender = $_POST['pgender'];
 $phone = $_POST['p_phone'];
 $adrpt = $_POST['adridpt'];
-$question = $_POST['sques'];
-$answer = $_POST['answer'];
+$question ="";
+$answer = "";
 
 include('includes/conn.php');
 $q = "SELECT * FROM doctor where email ='$email'";
@@ -183,43 +167,24 @@ $r3 = mysqli_query($con,$q4);
 $r4 = mysqli_query($con,$q3);
 $r5 = mysqli_query($con,$q5);
 $r6 = mysqli_query($con,$q6);
-if($r->num_rows>0){
+if($r->num_rows>0 || $r2->num_rows>0){
 		echo '<script type="text/javascript">'; 
 		echo 'alert("Email id is already registered");'; 
 		echo 'window.location.href = "index.php";';
 		echo '</script>';
 }
-elseif($r2->num_rows>0){
-		echo '<script type="text/javascript">'; 
-		echo 'alert("Email id is already registered");'; 
-		echo 'window.location.href = "index.php";';
-		echo '</script>';
-}
-if($r4->num_rows>0){
+if($r4->num_rows>0 || $r3->num_rows>0){
 	echo '<script type="text/javascript">'; 
 		echo 'alert("Mobile no is already registered");'; 
 		echo 'window.location.href = "index.php";';
 		echo '</script>';
 }
-elseif($r3->num_rows>0){
-		echo '<script type="text/javascript">'; 
-		echo 'alert("Mobile no is already registered");'; 
-		echo 'window.location.href = "index.php";';
-		echo '</script>';
-}
-if($r5->num_rows>0){
+if($r5->num_rows>0 || $r6->num_rows>0){
 	echo '<script type="text/javascript">'; 
 		echo 'alert("Adhar no is already registered");'; 
 		echo 'window.location.href = "index.php";';
 		echo '</script>';
 }
-elseif($r6->num_rows>0){
-		echo '<script type="text/javascript">'; 
-		echo 'alert("Adhar no is already registered");'; 
-		echo 'window.location.href = "index.php";';
-		echo '</script>';
-}
-
 else{
 	if(($type=="image/jpeg") || ($type=="image/jpg") || ($type=="image/png")){
 	if((strlen($phone)<10) || (strlen($phone)>10)){
