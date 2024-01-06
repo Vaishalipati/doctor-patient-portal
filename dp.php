@@ -133,6 +133,9 @@ if(($type1=="image/jpeg") || ($type1=="image/jpg") || ($type1=="image/png")){
 		
 		echo '<script type="text/javascript">'; 
 		echo 'alert("Doctor Registration successfully");'; 
+		session_start();
+		$_SESSION['useremail'] =$email;
+		$_SESSION['userpass'] = $pass;
 		echo 'window.location.href = "index.php";';
 		echo '</script>';
 	}}
@@ -248,6 +251,9 @@ else{
 		
 		echo '<script type="text/javascript">'; 
 		echo 'alert("Patient Registration successfully");'; 
+		session_start();
+		$_SESSION['useremail'] =$email;
+		$_SESSION['userpass'] = $pass;
 		echo 'window.location.href = "index.php";';
 		echo '</script>';
 	}}
