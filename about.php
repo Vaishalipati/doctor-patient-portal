@@ -52,11 +52,7 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script>
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-});
-</script>
+
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
@@ -65,10 +61,6 @@ $(function () {
 		include "profilemodels.php"; 
 }?>
 
-<script>
-function rset() {
-    document.getElementById("form1").reset();
-}
-</script>
+
 </body>
 </html>

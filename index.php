@@ -28,6 +28,8 @@
   <body>
 	<br>
 	<?php include "navbar.php"?>
+
+	<!-- crousel -->
 	<div class="container">
 	<h2 style="position:absolute;"><a href="#ab" data-toggle="collapse">Welcome To Doctor Patient Portal</h2></a>
 	<div style="position:absolute; margin-top:15%;" class="collapse" id="ab">
@@ -50,6 +52,7 @@
 	<div style="margin-left:-1.3%; width:102.7%; float:left; border-radius:0em;" class="jb jumbotron">
 	<p>&nbsp;</p>
 	<div style="margin-top:-7%;" class="row">
+	<!-- services section -->
 	<div class="col-md-4">
 	<div style="margin-left:-12%; width:115%; float:left;" class="panel panel-primary">
   <div class="panel-heading"><span class="glyphicon glyphicon-cloud"></span> Services</div>
@@ -66,7 +69,7 @@
   </div>
 </div>
 </div>
-
+<!-- benifits section -->
 <div class="col-md-4">
 <div style="margin-left:-2%; width:110%; float:left;" class="panel panel-primary">
   <div class="panel-heading"><span class="glyphicon glyphicon-ok-sign"></span> Benifits</div>
@@ -81,7 +84,7 @@
   </div>
 </div>
 </div>
-
+<!-- testimonials section -->
 <div class="col-md-4">
 <div style="margin-left:3%; width:110%; float:left;" class="panel panel-primary">
   <div class="panel-heading"><span class="glyphicon glyphicon-comment"></span> Testimonials</div>
@@ -122,7 +125,6 @@ else{
 		$dir2 = "doctor/".$docid."/img/";
 		$open2 = opendir($dir2);
 		
-		
 			while(($files = readdir($open)) != FALSE && ($files2 = readdir($open2)) != FALSE){
 			if($files!="."&&$files!=".."&&$files !="Thumbs.db" && $files2!="."&&$files2!=".."&&$files2 !="Thumbs.db"){
 				echo "<div style='font-family:calibri' class='well'><img id='hello' style='margin-top:2%; border-radius:6em;' width='50' height='50'  src='$dir/$files'> Given By <b>$na</b> 
@@ -141,7 +143,6 @@ else{
 </div>
 </div>
 </div>
-
 	<div style="font-family:calibri; font-size:14px; text-align:center;" id="static">
 	<?php
 	include('includes/conn.php');
@@ -168,11 +169,7 @@ else{
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script>
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-});
-</script>
+	
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 	
@@ -181,24 +178,5 @@ $(function () {
 		include "profilemodels.php"; 
 	 }?>	
 	
-
-
-
-<script>
-function rset() {
-    document.getElementById("form1").reset();
-}
-
-function rrset() {
-    document.getElementById("form2").reset();
-}
-
-function letters(input) {
-    var regex = /[^ a-z]/gi;
-    input.value = input.value.replace(regex, "");
-}
-</script>
-
-
   </body>
 </html>

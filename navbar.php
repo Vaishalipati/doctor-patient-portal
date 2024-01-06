@@ -243,3 +243,21 @@
   </div>
 </div>
 
+<script>
+function rset() {
+    document.getElementById("form1").reset();
+}
+
+function rrset() {
+    document.getElementById("form2").reset();
+}
+
+function letters(input) {
+    var regex = /[^ a-z]/gi;
+    input.value = input.value.replace(regex, "");
+}
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+});
+</script>
